@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias</title>
+    <title>Contato</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     
@@ -33,33 +33,43 @@
         </div>
       </nav>
 <div class="container text-align: center">
-    <header><h1>Noticias</h1></header>
+    <header><h1>Calcule sua Conversão de moeda</h1></header>
     <br>
     <strong>
-      <h2>Descubra o Mundo: Sua Próxima Aventura Começa Aqui!</h2>
+      <h2>Descubra o Valor da sua moeda para viagens incrivel</h2>
     </strong>
 
 <div class="container text-align: center p-3 mb-2 bg-dark-subtle text-dark-emphasis">
     <p>
-      <p>Com a recuperação do turismo global, muitos países estão atualizando suas diretrizes de viagem. Em 2023, diversas nações estão facilitando a entrada de turistas, com a remoção de restrições de COVID-19 e a simplificação de processos de visto. Destinos populares como Espanha, Itália e Japão estão atraindo viajantes com novas ofertas e pacotes promocionais.
-    </p>
+      <p>Digite aqui o Valor em reais para dolar:</p>
 
-      <p>Além disso, as companhias aéreas estão aumentando a frequência de voos e oferecendo tarifas mais competitivas. Os viajantes são aconselhados a verificar as exigências específicas de cada país antes de embarcar, incluindo documentação necessária e recomendações de saúde.</p>
-      
-      <p>Prepare-se para explorar o mundo novamente e aproveite as novas oportunidades de viagem que surgem neste ano!</p>
-      
-      <p>Espero que isso ajude! Se precisar de mais informações, é só avisar.</p></p>
+      <section>
+        <div class="container text-align: center">
+            <form action="conf.php" method="post">
 
+                <label for="reais">Reais</label>
+                <input type="number" name="reais">
+                <input type="submit" value="Calcule">
+
+            </form>
+        </div>
+      </section>
     </div>
+    <?php 
     
+    if (isset($_GET['mensagem'])) {
+      echo "<strong>" . htmlspecialchars($_GET['mensagem']) ."";
+  }    
+    
+    ?>
+
     <nav aria-label="Page navigation example">
         <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="index.html">Voltar</a></li>
+          <li class="page-item"><a class="page-link" href="page3.html">Voltar</a></li>
           <li class="page-item"><a class="page-link" href="index.html">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="page2.html">2</a></li>
           <li class="page-item"><a class="page-link" href="page3.html">3</a></li>
-          <li class="page-item"><a class="page-link" href="page4.php">4</a></li>
-          <li class="page-item"><a class="page-link" href="page3.html">Proximo</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
         </ul>
       </nav>
       <script src="js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
